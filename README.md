@@ -26,7 +26,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install parasut
+    $ gem install parasut-v4
 
 ## Usage
 
@@ -85,6 +85,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/dijita
 ## Contributors
 
 This gem uses @ahtung 's Parasut API v1 gem as its base. (https://github.com/ahtung/parasut)
+
 API Version 4 compability implemented by @dijitalgaraj - @feapaydin
 
 
