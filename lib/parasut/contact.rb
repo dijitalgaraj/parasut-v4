@@ -3,7 +3,7 @@ module Parasut
   # Contact
   class Contact
     include Her::JsonApi::Model
-    # # extend Parasut::Paginated
+
 
     # Relations
     has_many :outstanding_payments, class_name: 'Payment'

@@ -36,7 +36,7 @@ Create an initializer for Parasut options.
 
   # config/initializers/parasut.rb
   Parasut.options do |option|
-    option.api_base_url="http://url" # this is optional, default is "https://api.parasut.com/"
+    option.api_base_url="https://url" # this is optional, default is "https://api.parasut.com/"
     option.client_id = 'client_id'
     option.client_secret = 'client_secret'
     option.username = 'username'
@@ -54,6 +54,12 @@ Afterwards you can call a model:
     puts contacts.inspect
 
     account.destroy
+
+To paginate collections:
+
+    contacts=Parasut::Contact.all
+    contacts.page(2).per(25)
+    # Pagination uses kaminari. (https://github.com/kaminari/kaminari)
 
 
 ## ENVs
@@ -79,7 +85,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/dijita
 ## Contributors
 
 This gem uses @ahtung 's Parasut API v1 gem as its base. (https://github.com/ahtung/parasut)
-API Version 4 compability implemented by @dijitalgaraj
+API Version 4 compability implemented by @dijitalgaraj - @feapaydin
 
 
 ## License

@@ -4,16 +4,16 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'parasut/version'
 
 Gem::Specification.new do |spec|
-  spec.name                  = 'parasut'
+  spec.name                  = 'parasut-v4'
   spec.version               = Parasut::VERSION
   spec.platform              = Gem::Platform::RUBY
   spec.required_ruby_version = '>= 2.0.0'
-  spec.authors               = ['Dunya Kirkali', 'Onur Kucukkecce']
-  spec.email                 = ['dunyakirkali@ahtung.co', 'onurkucukkece@ahtung.co']
+  spec.authors               = ['Dijital Garaj','Furkan Enes Apaydın','Dunya Kirkali', 'Onur Kucukkecce']
+  spec.email                 = ['hello@dijitalgaraj.com','feapaydin@gmail.com','dunyakirkali@ahtung.co', 'onurkucukkece@ahtung.co']
 
   spec.summary               = %q{Parasut client.}
   spec.description           = %q{Parasut client.}
-  spec.homepage              = 'https://github.com/ahtung/parasut'
+  spec.homepage              = 'https://github.com/dijitalgaraj/parasut-v4'
   spec.license               = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
