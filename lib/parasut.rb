@@ -19,7 +19,7 @@ Kaminari::Hooks.init
 require_relative 'parasut/options'
 
 require_relative 'her/middleware/o_auth_provider_header'
-require_relative 'her/model/relation'
+require_relative 'her/model/pagination'
 
 # Models that are including Her::JsonApi::Model has to be required after Her initialization
 def require_parasut
@@ -56,6 +56,8 @@ module Parasut
       config.use Faraday::Adapter::NetHttp
       # config.use Faraday::Response::Logger, ActiveSupport::Logger.new(STDOUT)
     end
+
+    Her::Model::Relation.class_eval{include Her::Model::Pagination}
 
     # Call parasut models
     require_parasut

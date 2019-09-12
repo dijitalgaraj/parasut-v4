@@ -1,6 +1,6 @@
 module Her
   module Model
-    class Relation
+    module Pagination
 
       def page(page)
         Kaminari.paginate_array(self).page(page)
