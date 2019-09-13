@@ -4,6 +4,8 @@ module Parasut
   class Contact
     include Her::JsonApi::Model
 
+    include_root_in_json true
+    parse_root_in_json true
 
     # Relations
     has_many :outstanding_payments, class_name: 'Payment'
