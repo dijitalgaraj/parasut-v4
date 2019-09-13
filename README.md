@@ -62,6 +62,37 @@ To paginate collections:
     # Pagination uses kaminari. (https://github.com/kaminari/kaminari)
 
 
+
+### Http Client
+
+Parasut-v4 provides an http client integration to execute tasks manually.
+You can make your calls simply providing endpoint, body and headers. It automatically handles authentication and handles your request.
+
+This is an http client, hence it does not manipulate the response into objects.
+
+Making get requests: 
+
+    # Parasut::HttpClient.get(endpoint, query_parameters, headers, parse_json=true)
+    #   parse_json tries to parse the response body into hash 
+    contact=Parasut::HttpClient.get("contacts/123")
+    contact[:data][:attributes][:name]
+
+Executing post calls:
+
+    # Parasut::HttpClient.post(endpoint, body, headers, parse_json=true)
+    contact=Parasut::HttpClient.post(url, {
+      data:{
+        type: :contacts,
+        attributes:{
+          name: "Test From Api",
+          account_type: :customer
+        }
+      }
+    )
+
+
+
+
 ## ENVs
 
 - PARASUT_API_BASE_URL

@@ -45,13 +45,17 @@ module Her
           JSON.parse(res.body)
         end
 
-        def call(env)
-          add_header(env[:request_headers])
-          @app.call(env)
-        end
+        
 
       end
       #end static
+
+      def call(env)
+        Her::Middleware::OAuthProviderHeader.add_header(env[:request_headers])
+        @app.call(env)
+      end
+
+
     end
   end
 end
