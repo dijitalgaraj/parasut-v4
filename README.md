@@ -63,7 +63,9 @@ To paginate collections:
 
 
 
+
 ## Http Client
+
 
 Parasut-v4 provides an http client integration to execute tasks manually.
 You can make your calls simply providing endpoint, body and headers. It automatically handles authentication and handles your request.
@@ -80,7 +82,7 @@ Making get requests:
 Executing post calls:
 
     # Parasut::HttpClient.post(endpoint, body, headers, parse_json=true)
-    contact=Parasut::HttpClient.post(url, {
+    contact=Parasut::HttpClient.post("contacts", {
       data:{
         type: :contacts,
         attributes:{
