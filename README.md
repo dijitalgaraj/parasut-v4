@@ -63,7 +63,7 @@ To paginate collections:
 
 
 
-### Http Client
+## Http Client
 
 Parasut-v4 provides an http client integration to execute tasks manually.
 You can make your calls simply providing endpoint, body and headers. It automatically handles authentication and handles your request.
