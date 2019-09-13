@@ -23,6 +23,7 @@ require_relative 'her/model/pagination'
 
 # Models that are including Her::JsonApi::Model has to be required after Her initialization
 def require_parasut
+  require_relative 'parasut/http_client'
   require_relative 'parasut/version'
   require_relative 'parasut/product'
   require_relative 'parasut/document_status'
