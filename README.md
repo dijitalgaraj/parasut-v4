@@ -64,7 +64,8 @@ To paginate collections:
 
 
 
-## Http Client
+
+## HttpClient
 
 
 Parasut-v4 provides an http client integration to execute tasks manually.
