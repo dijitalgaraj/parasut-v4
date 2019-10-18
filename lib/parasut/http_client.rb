@@ -57,6 +57,23 @@ module Parasut
             # end get
 
 
+            def put(endpoint, query_parameters={}, headers={}, parse_json=true)
+
+                # The url
+                url="#{@@url_base}/#{endpoint}"
+
+                handle_headers(headers)
+
+                # Request
+                request=Faraday.put(url, query_parameters, headers)
+
+                # Return
+                parse_json ? JSON.parse(request.body).with_indifferent_access : request.body    
+
+            end
+            # end get
+
+
 
 
         end
