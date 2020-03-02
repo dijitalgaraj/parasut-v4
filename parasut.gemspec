@@ -32,6 +32,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'pry'
   spec.add_development_dependency 'webmock'
   spec.add_runtime_dependency 'oauth2'
-  spec.add_runtime_dependency 'her'
+  spec.add_runtime_dependency 'her', '1.1.0'
   spec.add_runtime_dependency 'kaminari', '0.17.0'
 end
